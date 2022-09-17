@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 
+const PORT = process.env.PORT || 80
+
 const app = express();
 app.set('view engine', 'ejs');
 
@@ -13,6 +15,6 @@ app.get('/', (req, res) => {
 });
 
 
-app.listen(8800, () => {
-    console.log('Listening on port 8800');
+app.listen(PORT, () => {
+    console.log('Listening on port ', PORT);
 });
